@@ -15,7 +15,7 @@ $ oc adm policy add-scc-to-user anyuid -z default
 
 ## Deploy the application with docker image.
 ```
-$ oc new-app docker.io/ayushgarglinux/httpd-access-logs
+$ oc new-app httpd-access-logs --image=docker.io/ayushgarglinux/httpd-access-logs --allow-missing-images
 
 $ oc get pod
 NAME                                 READY   STATUS    RESTARTS   AGE
